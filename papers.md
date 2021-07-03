@@ -27,7 +27,9 @@ The polarized emission of radio sources is mostly due to synchrotron radiation s
 
 There is an increasing interest in polarization of ERS at **high radio frequencies**, not only to better understand the physics behind the emitting system, e.g., the degree of ordering of the magnetic field and the direction of its field lines , but also because polarized ERS will be largely detected by forthcoming CMB experiments. Furthermore, the ERS contaminating signal in the polarization power spectra cannot be neglected to assess the power spectrum of ***lensing B-modes***.
 
+To forecast the contribution of radio point sources both in total intensity and polarized flux densities given the nominal specifics of a CMB experiment.
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MDAxMzk1Ml19
+eyJoaXN0b3J5IjpbMTQxODU0NDc4LC0xNDAwMTM5NTJdfQ==
 -->
