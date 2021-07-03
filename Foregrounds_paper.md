@@ -17,6 +17,9 @@ The list of Galactic foregrounds is long and includes anything emitting at submi
 All these emissions are partially polarized and the main contribution comes from synchrotron and dust (both polarized up to 20% level. At high frequencies(ν > 90 GHz), such a large polarization degree is produced by thermal dust grains aligning along the Galactic magnetic field lines. At low frequencies (ν < 70 GHz), cosmic electrons spiralling into the Galactic magnetic field produce synchrotron radiation. Molecular lines are expected to be polarized at lower levels ~1% whereas free–free emission can essentially be considered unpolarized.
 
 ### Extragalactic foregrounds
+
+![Frome Jacques](https://photos.google.com/search/_tra_/photo/AF1QipNDcMtrRr5AwFXJjY6NdHiWklVbg--YzArtAbBD)
+
 At smaller scales, the **extragalactic radio sources (ERS)** and star-forming dusty galaxies are the major contaminants.
 
 ### Mechanism 
@@ -32,5 +35,5 @@ To forecast the contribution of radio point sources both in total intensity and 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM2MjEwODAxXX0=
+eyJoaXN0b3J5IjpbMTY1NjQ3MDAwNCwtMzYyMTA4MDFdfQ==
 -->
