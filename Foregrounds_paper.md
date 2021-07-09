@@ -28,11 +28,14 @@ The polarized emission of radio sources is mostly due to synchrotron radiation s
 - pole-on: flat-spectrum radio quasars (FSRQs)
 
 There is an increasing interest in polarization of ERS at **high radio frequencies**, not only to better understand the physics behind the emitting system, e.g., the degree of ordering of the magnetic field and the direction of its field lines , but also because polarized ERS will be largely detected by forthcoming CMB experiments. Furthermore, the ERS contaminating signal in the polarization power spectra cannot be neglected to assess the power spectrum of ***lensing B-modes***.
+**(Davide's thesis)**
+Some galaxies host an active galactic nucleus, which is thought to be the accretion  
+of a massive black hole. These galaxies have a strong synchrotron emission and are loud in the radio frequencies. **These sources have a Poissonian statistics and therefore have white angular power spectrum.**   At small scales the signal from unresolved point sources dominates over the CMB signal, which is suppressed by Silk damping. Point sources can be polarized, typically between 1 and 5%, which makes them a potential foreground for small scales CMB polarization measurements.
 
 ### Forecast for CMB experiments
 To forecast the contribution of radio point sources both in total intensity and polarized flux densities given the nominal specifics of a CMB experiment.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExOTk4NTExMTIsLTM2MjEwODAxXX0=
+eyJoaXN0b3J5IjpbLTEyODg0NTE3MDAsLTM2MjEwODAxXX0=
 -->
