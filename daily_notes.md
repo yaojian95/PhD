@@ -43,6 +43,17 @@ for pixel 3520 [0,1,2,3,4] 4m44s
 [0,2,3,4] 0m37s
 [1,2,3,4] 0m12s
 - dynesty will stuck on some pixel
+
+# 0805
+- error : 弄混了 WMAP Ka and Planck 30
+- -print("Multiprocessing took {0:.2f} mins".format(1.232))
+
+# 0809 (meeting)
+- shrink the prior of A0 close to the real value 
+- nicer plots
+- fgbuster to get beta_s for Q and U ( rather than P)
+- errors of the likelihood analysis
+- different noise realizations  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU0MTM2NzIyMSwtMTk1NjYyOTg5OF19
+eyJoaXN0b3J5IjpbLTM3MTI5MTkwLC0xOTU2NjI5ODk4XX0=
 -->
