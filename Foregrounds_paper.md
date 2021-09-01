@@ -35,7 +35,14 @@ of a massive black hole. These galaxies have a strong synchrotron emission and a
 ### Forecast for CMB experiments
 To forecast the contribution of radio point sources both in total intensity and polarized flux densities given the nominal specifics of a CMB experiment.
 
+## [0823 Planck_ intermediate results XLIV. Structure of the Galactic magnetic field from dust polarization maps of the southern Galactic cap](https://www.aanda.org/articles/aa/full_html/2016/12/aa28636-16/aa28636-16.html#R2)
+Interstellar magnetic fields are tied to the interstellar gas. Together with cosmic rays they form a dynamical system that is an important (but debated) facet of the physics of galaxies. Magnetic fields play a pivotal role because they control the density and distribution of cosmic rays, and they act on the dynamics if the gas. Much of the physics involved in this interplay is encoded in the structure of interstellar magnetic fields. Observations of synchrotron emission and its polarization, as well as Faraday rotation and dust polarization, provide the means to characterize the structure of magnetic fields within galaxies.
+
+
+polarization fraction and polarization angle.
+![](https://www.aanda.org/articles/aa/full_html/2016/12/aa28636-16/aa28636-16-eq38.png)
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyODg0NTE3MDAsLTM2MjEwODAxXX0=
+eyJoaXN0b3J5IjpbMzQ2ODc0MTU1LC0zNjIxMDgwMV19
 -->
