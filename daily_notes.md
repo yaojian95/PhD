@@ -14,7 +14,7 @@ Simulate foreground maps, then use likelihood analysis to constrain tbe spectral
 
 # 0730
 - use Nside = 32, 2 degress
-- ***downgrade of the mask??***
+- [ ] ***downgrade of the mask??***
 - just overlapped region between C-BASS and S-PASS
 -  the $\beta_s$ with SPASS, CBASS, and with SPASS + CBASS
 # 0731
@@ -30,12 +30,13 @@ Simulate foreground maps, then use likelihood analysis to constrain tbe spectral
 # 0802
 - change from python 3.6 to python3.8, due to the installation of PYMC3
 - changing uK to mK slows down the dynesty
--  Try PYMC3 (too complicated) and emcee(works)
+-  Tried PYMC3 (too complicated) and emcee(works)
 
 # 0803
 - Try to find out why dynesty is so slow with all the frequencies 
 
 # 0804
+**narrow prior**
 - for pixel 400, [0,2,3,4] - 20s
 - [1,2,3,4] - 5s
 - [0,1,2,3,4] - 1m27s
@@ -49,11 +50,60 @@ for pixel 3520 [0,1,2,3,4] 4m44s
 - -print("Multiprocessing took {0:.2f} mins".format(1.232))
 
 # 0809 (meeting)
-- shrink the prior of A0 close to the real value 
+
+- shrink the prior of A0 close to the real value according the 'real value' in simulation
 - nicer plots
-- fgbuster to get beta_s for Q and U ( rather than P)
-- errors of the likelihood analysis
+- [ ] fgbuster to get beta_s for Q and U ( rather than P)
+- errors of the likelihood analysis 
 - different noise realizations  
+
+# 0812 
+Emcee: the **number of chains** really matter!
+
+# 0813
+
+ - [ ] error of emcee -- not symmetric? increasing chains didn't help
+ - [x] dynesty has nicer results, find out why it will stuck on some pixels.  prior for high SNR pixels should be narrow- close to the 'real' value.
+ 
+# 0814 still trying dynesty -- better results
+- P1/P3 = array([3.4501884, 3.4501884, 3.4501884, ..., 3.4501886, 3.4501884,
+       3.4501884], dtype=float32), power law indeed. 
+  
+# 0815 
+ checking further for dynesty
+ - mean, cov = dyfunc.mean_and_cov(samples, weights) 
+ - weighted mean?
+ - [ ] use the SNR at 2.3GHz to be the limit of high and low SNR (working in power law) 
+- **negative values** of A0 result in error of dynesty.
+	•[0-500] for low SNR
+
+	•SPASS only and both
+
+	    P_nu0.min() =  215, 111
+	    P_nu0  – 100， P_nu0+100 for high SNR
+
+	•CBASS only
+
+	    P_nu0.min()  =  62
+	    P_nu0 – 50， P_nu0+150 for high SNR
+	    
+## 0816 combine different noise realizations
+make good plots
+## 0817
+- make good plots
+ - [ ] fgbuster error for 50 realizations
+## 0818-0819
+fgbuster - how it works -- different patches(pixels) are independent
+- [x] SNR different for different nosie realizations?
+## 0820 Fgbuster code
+
+##  0821 Faraday rotation
+## 0822 use SPASS data to get RM
+ - [ ] the order of downgrade, smooth, and mask
+ From vnote 20190310
+nside downgrade: smooth first, then downgrade
+mask and beam : boost the power spectrum at small scales
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM3MTI5MTkwLC0xOTU2NjI5ODk4XX0=
+eyJoaXN0b3J5IjpbLTU1MjYxMTQ2LC0xOTU2NjI5ODk4XX0=
 -->
