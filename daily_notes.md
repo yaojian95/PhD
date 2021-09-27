@@ -123,9 +123,13 @@ mask and beam : boost the power spectrum at small scales
 -- calculate the $\rho$ in Nico's paper, which should be one
 -- (signal+ noise_1/$\sqrt{2}$) $\times$ (signal + noise_2/$\sqrt{2}$) which should be noise unbiased.
 -- apply the galactic cut $\pm 20 degree$  
+-- compare Fgbuster and Likelihood at High SNR regime, where Fgbuster works well.
+
+# 0928
+-- for scipy curve results, find the details of the biased pixels.
  
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI2NzU0MjQ1NiwtMTk1NjYyOTg5OF19
+eyJoaXN0b3J5IjpbLTc0NDUzNjc3OSwtMTk1NjYyOTg5OF19
 -->
