@@ -104,6 +104,28 @@ fgbuster - how it works -- different patches(pixels) are independent
 nside downgrade: smooth first, then downgrade
 mask and beam : boost the power spectrum at small scales
 
+# 0916
+- S/N in white pixels
+- compare beta_s maps of likelihood with Fgbuster
+- set a fake power-law power spectrum, generate many Gaussian realizations, and using Namaster to calculate power spectrum (and uncertainty) of some sub-region, finally  the overlapped region between SPASS and CBASS. There should be some data points at certain angular scales. 
+
+# 0921
+- for beyond 1-$\sigma$ results, indicate the related SNR and error, to show that error of high SNR region is indeed small
+
+# 0922
+- check for 1 pixel at low SNR region, to see whether noise mimic the power-law behavior
+- $(\beta1 - \beta2)/(\sigma)$
+- power spectrum estimation
+-- calculate the residuals (cl - cl_mean)/$\sigma$
+-- for circular region with the same f_sky of the overlapped region
+-- add noise for pure synchrotron
+-- calculate the cross correlation between SPASS and CBASS with noise
+-- calculate the $\rho$ in Nico's paper, which should be one
+-- (signal+ noise_1/$\sqrt{2}$) $\times$ (signal + noise_2/$\sqrt{2}$) which should be noise unbiased.
+-- apply the galactic cut $\pm 20 degree$  
+ 
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1MjYxMTQ2LC0xOTU2NjI5ODk4XX0=
+eyJoaXN0b3J5IjpbLTI2NzU0MjQ1NiwtMTk1NjYyOTg5OF19
 -->
