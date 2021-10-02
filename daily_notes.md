@@ -121,15 +121,21 @@ mask and beam : boost the power spectrum at small scales
 -- add noise for pure synchrotron
 -- calculate the cross correlation between SPASS and CBASS with noise
 -- calculate the $\rho$ in Nico's paper, which should be one
--- (signal+ noise_1/$\sqrt{2}$) $\times$ (signal + noise_2/$\sqrt{2}$) which should be noise unbiased.
+-- (signal+ noise_1*$\sqrt{2}$) $\times$ (signal + noise_2*$\sqrt{2}$) which should be noise unbiased.
 -- apply the galactic cut $\pm 20 degree$  
 -- compare Fgbuster and Likelihood at High SNR regime, where Fgbuster works well.
 
 # 0928
 -- for scipy curve results, find the details of the biased pixels.
+
+# 0929
+- add beam to the maps then calculate the power spetrum
+- check the posterior distribution for some pixels
+- add the 'cosmic variance' to the power spectrum estimation
+- [ ] noise add positive effect to total_P?
  
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc0NDUzNjc3OSwtMTk1NjYyOTg5OF19
+eyJoaXN0b3J5IjpbODAyODg2NTEwLC0xOTU2NjI5ODk4XX0=
 -->
