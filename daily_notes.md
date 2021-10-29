@@ -133,9 +133,27 @@ mask and beam : boost the power spectrum at small scales
 - check the posterior distribution for some pixels
 - add the 'cosmic variance' to the power spectrum estimation
 - [ ] noise add positive effect to total_P?
- 
 
+# 1008
+- import power spectrum estimation figures to overleaf;
+- set nside = 128
+- get beta_s from spass wmap planck (4 frequencies) with beam and noise, and smoothed to 5^degree;
+
+# 1011
+- noise level should be renormalized due to the beam effect? **YES 1014**
+# 1014
+- definition of S/N ;(signal only)/sigma
+- using smoothed sigma_P in the likelihood.
+- smoothing map(5 degrees), then apply the mask
+ 
+ - [ ] I use $\sigma_Q$ rather $\sigma_P$ to the $\sigma_P$, is this a problem?
+# 1015
+- get the value of likelihood of high SNR
+
+# 1029
+- using imuint to directly get the mle?
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODAyODg2NTEwLC0xOTU2NjI5ODk4XX0=
+eyJoaXN0b3J5IjpbLTE4Nzk0MTU1NzgsLTE5NTY2Mjk4OThdfQ
+==
 -->
