@@ -42,7 +42,25 @@ Interstellar magnetic fields are tied to the interstellar gas. Together with cos
 polarization fraction and polarization angle.
 ![](https://www.aanda.org/articles/aa/full_html/2016/12/aa28636-16/aa28636-16-eq38.png)
 
+# 1005 The C-Band All-Sky Survey (C-BASS): Simulated parametric fitting in single pixels in total intensity and  polarization
+
+## Sumarizing the foreground models for each component.
+
+Along any one line of sight there are multiple populations of synchrotron-emitting electrons, with each population potentially emitting with a different spectral index.  
+The frequency spectrum of such a superposition can be  (neatly) parametrised using a **moment expansion** (Chluba  et al. 2017). However, such an expansion introduces more free parameters into the spectral models than there are observations at frequencies that are dominated by synchrotron  emission. Given the small number of low-frequency surveys  currently available, instead of a full moment expansion, we  consider the inclusion of a simple curvature term in the synchrotron spectral model.
+
+At lower frequencies, and close to the Galactic plane, the synchrotron emission is less polarized  
+due to **Faraday depolarization**.
+
+- The ***ud grade*** subroutine does not include parallel transport.
+
+# 1007 Planck 2018 inflation
+- For well over a decade, the base-ΛCDM model has been established as the simplest viable cosmological model. Its six free  parameters can be divided into **primordial and late-time parameters**. The former describe the state of perturbations on observable  scales prior to re-entering the Hubble radius  around recombination($A_s, n_s$); The late-time parameters, on the other hand, determine the linear evolution of perturbations after re-entering the Hubble radius($\Omega_b, \Omega_c, \theta_{MC}, \tau$). 
+
+# 1025 Euclid: Forecast constraints on consistency tests of the ΛCDM model ?
+- The main cosmological probes of Euclid will be: galaxy clustering from the spectroscopic survey, and galaxy clustering and weak lensing from the photometric survey.
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzQ2ODc0MTU1LC0zNjIxMDgwMV19
+eyJoaXN0b3J5IjpbLTMwODAyNTQ1MiwtMzYyMTA4MDFdfQ==
 -->
