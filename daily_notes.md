@@ -152,8 +152,32 @@ mask and beam : boost the power spectrum at small scales
 
 # 1029
 - using imuint to directly get the mle?
+- new version of dynesty 
+
+# 1108
+rician distribution approximation when P/sigma is very high?
+
+- Can I assign multiple cores to each MPI rank? When MPI works on multiple nodes, can I also do this?
+- tutorials?
+- 
+Parallel Programming paradigms 
+A programming model is a collection of program abstractions that provides a simplified and transparent vision of the hardware and software system in its entirety. 
+Communication in a parallel computer is possible according to these patterns: 
+- Shared memory: by accessing shared variables 
+- Message-passing: exchanging messages 
+
+These patterns identify two parallel programming paradigms: 
+
+- Shared memory or global environment paradigm where processes interact exclusively working on common resources 
+-  Message passing or local environment paradigm where there are no shared resources, processes handle only local information and the only way to interact is by exchange of messages (message passing)
+
+
+# 1111
+- cobaya; polychord
+- sigmaP is acually sigma_Q or sigma_U 
+- (to prove sigmaP equals to sigma_Q and sigma_U)
+- noise for Planck LFI from QQ and UU
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4Nzk0MTU1NzgsLTE5NTY2Mjk4OThdfQ
-==
+eyJoaXN0b3J5IjpbLTczNTEzMDc2OSwtMTk1NjYyOTg5OF19
 -->
