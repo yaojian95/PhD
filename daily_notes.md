@@ -183,7 +183,9 @@ These patterns identify two parallel programming paradigms:
 
 # 1112 using Gaussian pdf to approximate Rician pdf when SNR is high
 
+# 1113
+- every pixel that meets a runtime error can try a second time. 
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDM5MDU4ODIsLTE5NTY2Mjk4OThdfQ
-==
+eyJoaXN0b3J5IjpbMTI0NzQxODU0OCwtMTk1NjYyOTg5OF19
 -->
