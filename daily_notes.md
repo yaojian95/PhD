@@ -146,7 +146,7 @@ mask and beam : boost the power spectrum at small scales
 - using smoothed sigma_P in the likelihood.
 - smoothing map(5 degrees), then apply the mask
  
- - [ ] I use $\sigma_Q$ rather $\sigma_P$ to the $\sigma_P$, is this a problem?
+ - [ ] I use $\sigma_Q$ rather than $\sigma_P$ to the $\sigma_P$, is this a problem?
 # 1015
 - get the value of likelihood of high SNR
 
@@ -174,10 +174,16 @@ These patterns identify two parallel programming paradigms:
 
 # 1111
 - cobaya; polychord
+- downgrade the maps on Q and U, rather on P
 - sigmaP is acually sigma_Q or sigma_U 
 - (to prove sigmaP equals to sigma_Q and sigma_U)
 - noise for Planck LFI from QQ and UU
+- compare with pysm beta_s with fluctuations, i.e., monopole subtracted
+- get the variance of rician distribution and probability on high SNR region.
+
+# 1112 using Gaussian pdf to approximate Rician pdf when SNR is high
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTczNTEzMDc2OSwtMTk1NjYyOTg5OF19
+eyJoaXN0b3J5IjpbLTEzNDM5MDU4ODIsLTE5NTY2Mjk4OThdfQ
+==
 -->
