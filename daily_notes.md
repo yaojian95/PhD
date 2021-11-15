@@ -186,6 +186,10 @@ These patterns identify two parallel programming paradigms:
 # 1113
 - every pixel that meets a runtime error can try a second time. 
 
+# 1115
+- use 2.3GHz as the reference frequency
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI0NzQxODU0OCwtMTk1NjYyOTg5OF19
+eyJoaXN0b3J5IjpbLTE3MTgxOTk2ODksLTE5NTY2Mjk4OThdfQ
+==
 -->
