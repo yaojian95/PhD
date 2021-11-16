@@ -188,8 +188,12 @@ These patterns identify two parallel programming paradigms:
 
 # 1115
 - use 2.3GHz as the reference frequency
+- diagonal plot between results and pysm 
+- violin plot distributions between results and pysm 
+
+# 1117
+analytical solution for gaussian when the SNR is high.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MTgxOTk2ODksLTE5NTY2Mjk4OThdfQ
-==
+eyJoaXN0b3J5IjpbLTU5NzM4NjEzNCwtMTk1NjYyOTg5OF19
 -->
