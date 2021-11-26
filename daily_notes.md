@@ -194,6 +194,15 @@ These patterns identify two parallel programming paradigms:
 # 1117
 analytical solution for gaussian when the SNR is high.
 
+# 1121
+
+two maxima for the likelihood function; One is A = 0? set prior to [-100, 100]
+normalized Stokes parameters? q/sigma, u/sigma
+
+# 1126
+- increase the number of realizations of noise to understand the sigma_map
+- cross power spectrum between Pysm and mine. 
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU5NzM4NjEzNCwtMTk1NjYyOTg5OF19
+eyJoaXN0b3J5IjpbMTU4Njk5MDIzLC0xOTU2NjI5ODk4XX0=
 -->
