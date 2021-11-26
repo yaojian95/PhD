@@ -59,8 +59,13 @@ due to **Faraday depolarization**.
 
 # 1025 Euclid: Forecast constraints on consistency tests of the ΛCDM model ?
 - The main cosmological probes of Euclid will be: galaxy clustering from the spectroscopic survey, and galaxy clustering and weak lensing from the photometric survey.
+# [1124 cross-correlation of DESI Luminous Red Galaxies and Planck CMB lensing](https://arxiv.org/pdf/2111.09898.pdf)
+
+-  Since the MV reconstruction is dominated by temperature, residual galactic and extragalactic foregrounds may contaminate the signal.
+- Angular power spectra and covariance from **Namaster**
+- pseudo Cl; band window function; 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMwODAyNTQ1MiwtMzYyMTA4MDFdfQ==
+eyJoaXN0b3J5IjpbLTQ0OTM5MDg1NCwtMzYyMTA4MDFdfQ==
 -->
