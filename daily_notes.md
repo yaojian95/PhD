@@ -203,6 +203,16 @@ normalized Stokes parameters? q/sigma, u/sigma
 - increase the number of realizations of noise to understand the sigma_map
 - cross power spectrum between Pysm and mine. 
 
+# 1130
+- found an error in calculating the sigma_noise
+
+# 1206
+- pick out the region where sigma is small than 0.1 to make scatter plot
+- cross the correlation cl/sqrt(cl*cl)
+$\rho = \frac{Cl(S\times P)}{\sqrt{Cl(S)Cl(P)}}$ 
+
+# 1209
+investigate the effect of the monopole on the cross_ps
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU4Njk5MDIzLC0xOTU2NjI5ODk4XX0=
+eyJoaXN0b3J5IjpbMTM3MjYzMDc5NCwtMTk1NjYyOTg5OF19
 -->
