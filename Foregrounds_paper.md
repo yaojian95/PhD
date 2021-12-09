@@ -64,8 +64,15 @@ due to **Faraday depolarization**.
 -  Since the MV reconstruction is dominated by temperature, residual galactic and extragalactic foregrounds may contaminate the signal.
 - Angular power spectra and covariance from **Namaster**
 - pseudo Cl; band window function; 
+# [What can CMB observations tell us about the neutrino distribution function?](https://arxiv.org/pdf/2111.12726.pdf)
+
+- CMB and neutrinos : the angular scales associated to the **acoustic sound horizon** $θ_s$ and the **Silk damping scale** $θ_d$, or the **comoving angular diameter distance** to the CMB $D_A$.
+-- The dominant physical effect of the relativistic energy density in neutrinos is that they contribute to the Hubble rate before recombination. The sensitivity of the CMB to $N_{eff}$ then arises from the different dependence of the acoustic sound horizon $r_s$ and damping scale $r_d$ on the Hubble rate
+-- In contrast to the relativistic case, the leading-order effect of the nonrelativistic energy density in neutrinos is via the comoving angular diameter distance $D_A$. This shifts all angular scales measured in the CMB to lower multipoles.
+
+In summary, measurements of the CMB on a wide range of angular scales can probe both the early- and late-time properties of neutrinos, with the key quantities that can be constrained by CMB data being the relativistic and non-relativistic neutrino energy densities.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ0OTM5MDg1NCwtMzYyMTA4MDFdfQ==
+eyJoaXN0b3J5IjpbMTM5OTI1OTk0NywtMzYyMTA4MDFdfQ==
 -->
