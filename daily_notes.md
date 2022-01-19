@@ -213,6 +213,30 @@ $\rho = \frac{Cl(S\times P)}{\sqrt{Cl(S)Cl(P)}}$
 
 # 1209
 investigate the effect of the monopole on the cross_ps
+
+# 1217
+- modulation map; set different values than 4.5 for saturation
+
+
+# 0116 MFs and Non-Gaussianity
+
+# 0119 coordinates
+https://ned.ipac.caltech.edu/coordinate_calculator
+https://lambda.gsfc.nasa.gov/toolbox/footprint/images.cfm
+
+    from astropy import units as u
+	from astropy.coordinates import SkyCoord
+	
+	c = SkyCoord(ra=0*u.degree, dec=-57.5*u.degree)
+	Out[15]:
+	<SkyCoord (ICRS): (ra, dec) in deg
+	    (0., -57.5)>
+	    
+	c.galactic
+	Out[14]:
+	<SkyCoord (Galactic): (l, b) in deg
+	    (316.08427903, -58.29546592)>
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM3MjYzMDc5NCwtMTk1NjYyOTg5OF19
+eyJoaXN0b3J5IjpbODk1NDk2ODAsLTE5NTY2Mjk4OThdfQ==
 -->
