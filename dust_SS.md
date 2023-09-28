@@ -1,4 +1,4 @@
-<!-- [Toc] -->
+[Toc]
 
 # dust SS
 
@@ -288,8 +288,308 @@ v3 second normalization only (v3 = v2)
 - NN_out_Q_12amin_physical_units.npy is not same with Nico's
 
 # 1019
-- show all the results(MFs :heavy_check_mark:, maps:x:, power spectra:x:) with one script
+- show all the results(MFs :heavy_check_mark:, maps:x:, rescale to physical units:x:, power spectra:x:) with one script
 - test the same model with different noise level
 - convergence of the machine learning trained model 
 
+# 1025
+- save the output from training and pick one realization of noise
+- 今天挨了老师的教育了。
+- 工作要更努力。
+- 自己做的东西很重要， be confident 
+- 更主要的是要多参加panex 的会议，甚至听不懂也没关系。积极问问题。
  
+# 1028
+https://brendanhasz.github.io/2019/01/05/sphinx.html
+https://sphinx-tutorial.readthedocs.io/
+
+# 1029 
+干活之前先想好把代码分块，每一块负责不同的内容，最后再整合在一起。 
+
+# 1101
+
+normalize w.r.t. the patches EB power spectra rather than Q and U?
+
+# 1104 :x::x::x::x:发现了错误
+
+maps rescaled to [-1, 1]; noise [0,1] :x: Big mistake!!
+
+每一次循环都会使得原始数据发生改变，而这是不应该发生的！！
+
+np.rand.uniform(-1, 1): named `extended`
+
+
+# 1107
+- deterministic case: show the power spectra in Bicep mask
+- directly from noise [-1,1]
+- from noise [-1,1], smoothing to 80', rescale to [-1,1]
+- SNR plots Signal/std
+- have an example of the MF plot for different realizations
+- random case: more complete results
+
+# 1113 
+find the **best_epoch**, by testing with another realization (**or another two**) of noise
+
+use the MFs as the loss to train the model !!!!!!
+
+what to do; the reason to do; the expectation of the results of doing things; the explanation for expected results.
+
+
+choose the best epoch;
+choose the best case (snr_10, snr_1, snr_0.1, pure_noise)
+solving the problem of 'over-fitting'
+see the performance of pure_noise model 
+
+
+-- check the variation of the full-resolution maps, rather than small scales only 
+-- use poltens to normalize the small scales from ForSE
+
+# 1121
+
+also plot the ps from deterministic case in the plot of ps from SNR = 10, 1, 0.1?
+renormalization with poltens?
+over-fitting for other SNR cases?
+std in map space, of other SNR cases
+
+# 1130
+- compute the correlation between Ls and SS_generated
+- plot the ss_only, ss_only*Ls
+- add ps of poltens patch
+- divide polten full-sky maps to patches
+- 
+
+# curvature of synchrotron emission
+
+$$
+S_{\nu, s}=A_s\left(\frac{\nu}{\nu_{0, s}}\right)^{\beta_s+s_{\mathrm{run}} \log \left(\nu / \nu_{0, s}\right)}
+$$
+
+# 2023年开始了
+# 0107
+:heavy_check_mark: For the deterministic case at 3 amin, multiply the renormalized small scales with large scales at 12', rather than 20'
+- Problem: the large scales from upsampling 320x320 to 1280x1280 have a border effect due to the repeation of 4x4 pixels. 
+
+- [x] Smoothing the 12' patches to 13' more smoothing to reduce the border effect; Leading to a maximum of 6% power loss at $\ell \sim 600$
+
+# 0109 
+
+todo list for the deterministic case:
+
+fit the power law;
+power loss for different Galactic latitude;
+E/B ratio;
+compare EB with TT power spectra
+
+## check the BICEP's notes to validate the generated maps of PySM
+- 2022 Sept 21 - Clem Pryke
+- - compare the full-sky map with Planck 
+- - compare the zoom-in map of BICEP mask with Planck
+- - compare the cl of BICEP mask with Planck (add BICEP Ad 4.25 $\mu K^2$)
+- - compare with CMB to get equivalent r
+ - polarization fraction (2023/01/18)?
+ - ratio of the power-law? (2023/01/18) : power-law break for old version of d10
+
+# 0112 read papers to know what to do next!!!
+
+# 0114 (delta) bandpass, unit conversion, color correction
+
+- unit conversion and bandpass https://github.com/bthorne93/PySM_public/blob/master/docs/unit_conversion.pdf
+
+- Planck 2018 results - XI. Polarized dust foregrounds section 4.2, table 2
+ 
+# 0118
+- how to generate the gaussian realization from a power spectra calculated within a mask?
+    - times a factor of full_sky/the area_of_mask to the $C_{\ell}$, then use synfast to have the full sky Gaussian maps, finnaly apply the mas 
+
+# 0118 analytical expressions of MFs of GRF
+1.https://arxiv.org/pdf/1103.4300.pdf
+2. https://academic.oup.com/mnras/article/297/2/355/988332
+3. ![](https://i.imgur.com/gzQf3tW.png =500x500)
+![](https://i.imgur.com/pwedf4W.png =200x150)
+
+
+
+# 0119 use many realizatios to construct the basis ea, eg, eng
+ PCA rather than Gram-Schidmit?
+ 
+# 0122 Paper:  use Minkowski Tensor to measure the anisotropies
+ 
+# 0123-0124 generate anisotropic Gaussian maps from latest PySM3 maps
+
+# 0125 generate 100 realizations of Gaussian, an-Gaussian, PySM3 maps
+
+# 0130 use new new maps of PySM3 maps
+
+# 0203 comapre with Poltens
+1. generate pysm_circle maps up to lmax = 8192 and 100 realizations
+2. compare pysm_circle maps with ForSE maps at 3 arcmins
+3. generate Gaussian-modulated maps with the correct power spectrum and 'same' anisotropy
+4. have the right Minkowski Functionals of Gaussian-only maps
+
+# 0207 
+
+- generate the Gaussian modulated maps with the old modulation, but for the latest poltens maps, which is based on the varres GNILC template
+
+# 0213 power deficit at around ell 200~400
+- thinking that this is due to upsampling, smoothing, dividing of the `Large Scales`, so check the `large scales` before and after these steps;
+- but found that these scales are the boundary of large scale and small scales, so are due to the discontinuty when combining the small scales with large scales. 
+ 
+ 
+ # 0215
+ 
+ TE; TB; 
+ smooth ForSE maps to 80 arcminutes and compare with the observed intensity maps
+ scattering transform for non-gaussianity?
+
+zero-level?
+
+# 0221
+- how to quantify the level of anisotropies?
+- what does the phrase 'same modulation of small scaels' mean? To have the same anisotropies? Doesn't that mean that the small scales of the two sets are the same at each direction? No, not really. Same modulation means 'same non-stationary properties at different directions'. When using `hp.synfast`, the output is stationary, which mean it has same fluctions for various directions, but the map values are indeed different for each direction, which is the anisotropies. 
+
+# 0222
+- check the Gaussian-modulated maps: maps with same color scale; power spectra in the BICEP/Keck region; maps around the mask borders
+- tri-angle plots, without normalized with the maximum values 
+
+# 0223 stochastic small scales validation
+- validate the small scales for each patch (maps, MFs, )
+- validate for the full-sky maps
+
+# 0302
+- calculate the full-sky MFs for different sky mask, also with Nico's modulation, use d12 also, as a test
+- gaussian/non-gaussian : pixels histogram
+- scattering transform
+- test the pynkowski
+- show the modulation
+- find the best-epoch for stochastic case 
+
+# 0316 
+wavelet scattering transform
+- used to obtain different realizations of foregrounds
+
+# 0320 validate the variations of different realizations of small scales
+
+- std of full-resolutions patches
+- std of full-sky power spectra
+
+# 0322 wst
+- rwst for 1 patch of ForSE, Poltens, Gaussian, Gaussian-mod , Q only and Q+iU results 
+
+# 0325 rwst 
+- (Q+iU)/(P+I) seem to be more Gaussian than (Q+iU)/(P+I)
+- (Q+iU)/P
+## for one single patch, check the power spectra for different kinds of maps
+- ignore Q and U first, only look at (Q+iU)/(I+P)
+- look at G_nmt first, understant why it is not fully gaussian as seen from the plot
+
+# 0330 rwst current conclusions
+- ForSE are indeed more non-Gaussian than Poltens (**not saying Poltens are Gaussian**): the less 'scale invariant' dependence; ForSE has smaller S1_iso1, larger S2_iso1. `If we don't care too much about the Gaussian patches, we are already done.`
+- 
+
+# 0331
+- another option for Intensity maps of Gaussian patches
+    - :x: Gaussian realization of CNILC_I map
+- [ ] 'phase randomization' of `mapQiU_Poltens`
+
+# 0401
+- Gaussian maps have the same power as poltens only on full-sky, they will have different power over differnt patch; 
+- :x::exclamation: check if G-patch and P-patch have the same power; if not, use `Namaster` to generate Gaussian patches using the power spectra from P-patch, rather than G-Patch; (induced Gaussianity from the projection?)
+- [x] :x: use poltens Intensity map(with small scales injected) as patch_I
+
+# 0402 
+- [ ] figure out how the convolution with wavelet works!
+
+- renormalization of small scales of ForSE: poltens patches v.s. Gaussian patches (Gaussian patches may have different power for each patch)
+
+# 0403
+- synchrotron and dust
+- synchrotron (**on average** )less important than dust for r~0.01 at small scales(synchrotron has steep slope in the l space) (there is large uncertainty!)
+
+
+# 0415 
+zotero 插件， 多篇文章的笔记汇集在一起
+
+![](https://i.imgur.com/8KfdgKX.png)
+
+<mark > half wave plate </mark>
+
+![](https://i.imgur.com/WXuf0Tb.png)
+
+https://lambda.gsfc.nasa.gov/education/lambda_graphics/cmb_power_spectra.html
+
+
+# 0417 FIX Section 2
+
+plot random map with fixed map
+
+https://physics.stackexchange.com/questions/54124/relation-between-multipole-moment-and-angular-scale-of-cmb
+
+# 0502 Preparation for the Progress report!
+
+
+# 0525 Training new model for stochastic 3 arcminutes
+
+- Before training new model, calculate the covariance matrix for the full-sky map, not only for patches
+- use the ForSE+S at 12arcmin to generate stochastic 3 arcminutes
+- 
+- [ ] change output at 12amin of different snr case to be the input of ForSE+D? 
+- 
+- Train new model for stochastic 3 arcminutes
+
+
+# 0529 
+
+ -  LS_20amin: use the deterministic 12amin, or stochastic 12 amin
+ 
+- A bug in the correct_EB -- $\sqrt{0.5}$, not 0.5 for alms. :good: NOT A BUG. 
+
+- BB more correlated than EE for the 12amin stochastic maps?
+   
+    -  find similar thing for poltens
+   
+- A bug in the plot_MF function (corrected in the codes, not in the figures)
+
+# 0530 research maybe boring, but it is ok as long as somebody is around to discuss. 
+
+# 0601
+
+- [x] only generate one patch, rather than whole 174 patches at the first step
+
+# 0605 didn't rescale the signal to [-1, 1] before adding noise 
+- modify the utility.py from12to20 random_noise
+
+# 0606 new training: add more than one realization of 12 maps in the training data
+
+# 0626
+find the sub-patch with bad covariance matrix, replace other `sub-patches` belonging to the same `patch` with random noise, then calculate the covariance matrix 
+
+# 0905
+- [ ] add a plot for sub-patches at 5*5 deg
+
+
+# 0906 PySM
+- show MFs of only one realization of small scales for the patches
+
+# 0910 ForSE
+
+- [x] test NN replaced with Gaussian then normalize with LS 
+- [x] test NN replaced with noise then normalize with LS
+- [x] test noise to calculate COV 
+
+# 0911 ForSE 
+- [x] covariance matrix: Q and U separately, rather than E and B
+
+# 0912 ForSE
+- [ ] change the way of **rescaling** before training, e.g., $(x-\bar{x})/{\sigma}$, rather than simply rescaling to [-1, 1]
+- [ ] change the noise to np.random.normal($\bar{x}, \sigma$) where $\bar{x}$ is the mean value of the sub_patch and $\sigma$ is the std. This case it is hard to limit in range [-1, 1]. Can try uniform distribution but multiple with a large number
+- [x] some patches (high std) have good cov-mat, some are bad. can **train two different models.** but first should find out the bad and good patches :x:
+- [x] train only for 4 patch ($4*49$) sub-patches:x:
+- [x] increase the level of noise :x:
+- [x] use pure noise to be the input to avoid the effect of repeating the pixels for 4 times :x:
+- [x] cov_mat is normalized w.r.t. the diagonal values. should see the absolute values :x:
+- [x] calculate ss_12amin as ss_3amin  :x:
+- [ ] replace NN output with noise but add a constant component.
+
+
+# calculate full-sky covariance matrix
+- average the patches to a lower resolution (apply a beam to the patches)
